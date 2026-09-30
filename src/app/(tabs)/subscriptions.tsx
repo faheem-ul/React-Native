@@ -1,9 +1,12 @@
 import { Link } from "expo-router";
-import { Text, View } from "react-native";
+import { styled } from "nativewind";
+import { Text } from "react-native";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+const SafeAreaView = styled(RNSafeAreaView);
 
 const Subscriptions = () => {
   return (
-    <View className="flex-1 items-center justify-center">
+    <SafeAreaView className="w-full bg-background flex-1 items-center justify-center">
       <Text className="text-2xl font-bold">Subscriptions Page</Text>
       <Link
         className="mt-3"
@@ -14,7 +17,7 @@ const Subscriptions = () => {
       >
         <Text className="text-blue-500">Subscription of claude</Text>
       </Link>
-    </View>
+    </SafeAreaView>
   );
 };
 
